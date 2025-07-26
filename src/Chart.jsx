@@ -1,7 +1,7 @@
 
 import { Cell, Pie, PieChart, Tooltip, Legend, LabelList } from 'recharts';
 
-const COLORS = ['#4f8ef7', '#a5c6ff', '#cce0ff']; // Blue gradient scheme like Groww
+const COLORS = ['#4f8ef7', '#a5c6ff', '#cce0ff']; 
 
 export default function Chart({ RealData }) {
   const newData = [
@@ -27,7 +27,7 @@ export default function Chart({ RealData }) {
           <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
         ))}
 
-        {/* Labels outside each segment */}
+    
         <LabelList
           dataKey="value"
           position="outside"

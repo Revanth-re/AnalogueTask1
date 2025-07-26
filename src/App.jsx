@@ -52,7 +52,7 @@ const App = () => {
       <div style={{ display: 'flex', marginTop: '40px', alignItems: 'center' }}>
         <Chart RealData={inputData} />
         
-        {/* Right Side Details */}
+      
         <div style={{ marginLeft: '40px' }}>
           <h3 style={{ margin: '10px 0' }}>Investment: ₹{inputData.type1.toLocaleString()}</h3>
           <h3 style={{ margin: '10px 0' }}>Return: {inputData.type2}%</h3>
