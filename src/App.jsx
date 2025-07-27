@@ -13,13 +13,16 @@ console.log(inputData.type1,inputData.type2);
 
 
   return (
-    <div style={{ padding: '30px', fontFamily: 'sans-serif' }}>
+    <div style={{ display:"flex", padding: '30px', fontFamily: 'sans-serif', justifyContent:"center" ,alignItems:"center"
+
+    }}>
+
       <form>
         <label>Monthly Investment (₹): {inputData.type1.toLocaleString()}</label><br />
         <input
           type="range"
           min={1000}
-          max={1000000}
+          max={100000}
           value={inputData.type1}
           onChange={(e) =>
             setInputData((prev) => ({ ...prev, type1: Number(e.target.value) }))
@@ -49,16 +52,23 @@ console.log(inputData.type1,inputData.type2);
             setInputData((prev) => ({ ...prev, type3: Number(e.target.value) }))
           }
         />
-      </form>
-
-      <div style={{ display: 'flex', marginTop: '40px', alignItems: 'center' }}>
-        <Chart RealData={inputData} />
+      </form>         
+      <Chart RealData={inputData} />
 
         <div style={{ marginLeft: '40px' }}>
           <h3>Investment: ₹{inputData.type1.toLocaleString()}</h3>
           <h3>Return: {inputData.type2}%</h3>
           <h3>Time: {inputData.type3} years</h3>
         </div>
+
+      <div style={{ display: 'flex', marginTop: '40px', alignItems: 'center' }}>
+        {/* <Chart RealData={inputData} /> */}
+{/* 
+        <div style={{ marginLeft: '40px' }}>
+          <h3>Investment: ₹{inputData.type1.toLocaleString()}</h3>
+          <h3>Return: {inputData.type2}%</h3>
+          <h3>Time: {inputData.type3} years</h3>
+        </div> */}
       </div>
     </div>
   );
